@@ -13,6 +13,11 @@ html {
   height: 630px;
   width: 100%;
 }
+.image {
+  height: 630px;
+  width: 100%;
+  box-shadow: 40px 60px grey;
+}
 .mainDiv {
   /* height: 100%; */
   width: 100%;
@@ -21,6 +26,14 @@ html {
 .text-block {
   position: absolute;
   top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.text-block1 {
+  /* position: absolute; */
+  /* bottom: 50%; */
+  /* top: 50%; */
   left: 20%;
   transform: translate(-50%, -50%);
   color: white;
@@ -63,6 +76,13 @@ html {
   opacity: 0.7;
   padding: 5px;
 }
+.paraLine {
+  font-size: 15px;
+  font-weight: 300;
+  /* font-family: lato; */
+  opacity: 0.7;
+  padding: 5px;
+}
 .ImgPara {
   display: flex;
   width: 85%;
@@ -71,10 +91,11 @@ html {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  align-items: center;
 }
 .morePara {
   width: 50%;
-  background-color: red;
+  /* background-color: red; */
   padding: 20px;
 }
 .img {
@@ -93,4 +114,41 @@ html {
   background-position: 50%;
   background-repeat: no-repeat;
   transform: scaleY(-1);
+}
+.headingPara {
+  margin-bottom: 1px;
+  font-weight: normal;
+}
+.ulStyle {
+  display: flex;
+  top: 20%;
+}
+.navStyle {
+  display: flex;
+  top: 20%;
+}
+.navStyle::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
+}
+.fullImage {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myVideo {
+  height: 650px;
+  /* width: 100%; */
+}
+.videoStyle {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }

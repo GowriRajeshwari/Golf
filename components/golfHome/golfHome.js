@@ -1,16 +1,12 @@
-var controller = new ScrollMagic.Controller();
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
 
-$(".wrapper").each(function () {
-  var tl = new TimelineMax();
-  var child = $(this).find(".child");
-  tl.to(child, 1, { y: -180, ease: Linear.easeNone });
-
-  var scene = new ScrollMagic.Scene({
-    triggerElement: this,
-    triggerHook: 0.4,
-    duration: "100%",
-  })
-    .setTween(tl)
-    .addIndicators()
-    .addTo(controller);
-});
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
