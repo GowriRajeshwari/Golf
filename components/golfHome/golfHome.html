@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="golfHome.css" />
     <script src="golfHome.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
       body,
       html {
@@ -12,7 +13,10 @@
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
       }
-
+      .test {
+        background-color: yellow;
+        
+      }
       * {
         box-sizing: border-box;
       }
@@ -20,9 +24,11 @@
       .bg-image {
         height: 630px;
         width: 100%;
+        transition: height 1s;
       }
       .mainDiv {
         width: 100%;
+        background-color :"pink"
       }
     </style>
   </head>
@@ -31,24 +37,33 @@
       <div>
       
         <div class="bg-image">
-          <div>
-            <nav class="navStyle">
-              <ul class="ulStyle">
-                <li>home</li>
-              <li>contact</li>
-              </ul>
-            </nav>
+          <div class="navbar">
+            <div class="rowHeader">
+              <div>
+            <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
+              </div>
+              <div class="centerStyle">
+                <a href="#what">What we do</a>
+                <a href="#ourworld">Our worlds</a>
+                <a href="#experience">Experience</a>
+                <a href="#company">Company</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+            
+           
           </div>
         <div class="text-block">
-          <div class="heading">
+          <div class="heading w3-container w3-center w3animatebottom">
             Golf
           </div>
         </div>
       </div>
+      <script src="animate.js"></script>
       </div>
       <div>
         <div class="paraCenter">
-          <p >
+          <p>
           <div class="para">
             We commission the world’s most renowned course architects to
           </div>
@@ -119,16 +134,16 @@
           <div class="img">
             <div>
               <img
-              class="bg-image"
+              class="image"
               src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg"
             />
             </div>
            
           </div>
-          <div class="morePara">
+          <div class="morePara ">
             <div class="para">
             Perfect recreation in an unmatched location</div>
-            <p>
+            <p class="w3-container w3-center w3animatebottom">
               <div class="paraLine">Our widely-acclaimed courses have been designed by </div>
               <div class="paraLine">some of the world’s very best architects, including </div>
               <div class="paraLine">Robert Trent Jones Jr. and Tom Fazio. </div>
@@ -156,11 +171,54 @@
         <div>
           <div class="fullImage">
             <img
-            class="bg-image"
+            class="bg-image1"
             src="../../assets/elizeu-dias-RN6ts8IZ4_0-unsplash.jpg"
           />
           </div>
         </div>
+
+        <div>
+      
+          <div class="container">
+            <!-- <div class="img-gradient">
+              <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="horseImg">
+            </div> -->
+            
+            <div class="footerAboveImg">
+            <div class="centered">
+              <div>OutDoor Pursuits</div>
+              <!-- <div class="explore">
+                Explore
+              </div> -->
+            </div>
+           
+          </div>
+          </div>
+
+          <div class="footer">
+            <div class="row">
+              <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
+              <!-- <div class="iconsize"></div> -->
+              <div class="row">
+            <div class="footer">
+              <div class="InnerFooter">Company</div>
+              <div class="InnerFooter" >Carrer</div>
+              <div class="InnerFooter">Foundation</div>
+              <div class="InnerFooter">Prees</div>
+              <div class="InnerFooter">Privacy</div>
+
+            </div>
+            <div  class="footer">
+              <div class="InnerFooter">Get in Touch</div>
+              <div class="InnerFooter" >(480)624-5688</div>
+              <div class="InnerFooter">mail@discoverylandco.com</div>
+            </div>
+          </div>
+          </div>
+          <div>
+            <p>© Discovery Land Company. All rights reserved.</p>
+          </div>
+          </div>
 
 
       </div>
