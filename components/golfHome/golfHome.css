@@ -81,7 +81,8 @@
   font-size: 35px;
   font-weight: 300;
   font-family: lato;
-  opacity: 0.7;
+  color: #7c7b7b;
+  /* opacity: 0.7; */
   padding: 5px;
 }
 .paraLine {
@@ -276,26 +277,51 @@
   -moz-backface-visibility: hidden;
   backface-visibility: hidden; */
 }
-
-.cssanimation,
-.cssanimation span {
-  animation-duration: 1s;
+.animated {
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top: 95px;
+  margin-bottom: 60px;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.cssanimation span {
-  display: inline-block;
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.fadeInBottom {
-  animation-name: fadeInBottom;
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
-@keyframes fadeInBottom {
-  from {
+.black {
+  background-color: white;
+  /* transform: translate(0%, 125%); */
+  /* animation: matrix; */
+}
+.animate {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(40px);
   }
-  to {
+  /* 50% {
+    opacity: 0.5;
+    transform: translateY(20px);
+  } */
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }

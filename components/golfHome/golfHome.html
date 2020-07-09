@@ -6,6 +6,25 @@
     <script src="golfHome.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+      
+$(document).ready(function () {
+  $(window).scroll(function () {
+  var height = $(window).scrollTop();
+  var element = $(".changethis");
+  if (height > element.offset().top) {
+    // element.fadeIn(3000)
+    $(".black").addClass("animate");
+  }
+  else{
+    $(".black").removeClass("animate");
+
+  }
+});
+
+});
+
+    </script>
     <style>
       body,
       html {
@@ -54,7 +73,7 @@
            
           </div>
         <div class="text-block">
-          <div class="heading w3-container w3-center w3animatebottom">
+          <div class="heading animated fadeInDown">
             Golf
           </div>
         </div>
@@ -62,14 +81,14 @@
       <script src="animate.js"></script>
       </div>
       <div>
-        <div class="paraCenter">
+        <div class="paraCenter changethis">
           <p>
-          <div class="para">
+          <div class="para black">
             We commission the world’s most renowned course architects to
           </div>
-          <div class="para">design spectacular golf experiences on challenging yet incredibly </div>
-          <div class="para">playable 18-hole courses. Our trademark comfort stations also set </div>
-          <div class="para">new standards in on-course amenities. </div>
+          <div class="para black">design spectacular golf experiences on challenging yet incredibly </div>
+          <div class="para black">playable 18-hole courses. Our trademark comfort stations also set </div>
+          <div class="para black">new standards in on-course amenities. </div>
         </p>
         </div>
         <div class="ImgPara">
