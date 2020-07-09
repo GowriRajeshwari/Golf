@@ -12,17 +12,34 @@ $(document).ready(function () {
   $(window).scroll(function () {
   var height = $(window).scrollTop();
   var element = $(".changethis");
-  if (height > element.offset().top) {
-    // element.fadeIn(3000)
-    $(".black").addClass("animate");
+  $('.changethis').each(function(){		
+  if (height > $(this).offset().top) {
+
+    $(this).addClass("animate");
   }
   else{
-    $(".black").removeClass("animate");
+    $(this).removeClass("animate");
 
   }
+})
 });
 
 });
+// $(document).ready(function(){
+// 	topMax = 100;
+//   topMin = 25;
+//   $(document).scroll(function(){
+//     $('.changethis').each(function(){		
+//     	if($(this).offset().top-$(window).scrollTop() <= topMax && $(this).offset().top-$(window).scrollTop()>=topMin){
+//         // $(this).css({'background':'#c7c7c7'});
+//         $(this).addClass("animate");
+//       }else{
+//         // $(this).css({'background':'inherit'});
+//         $(this).removeClass("animate");
+//       }
+//   	});
+//   });  
+// });
 
     </script>
     <style>
@@ -92,31 +109,31 @@ $(document).ready(function () {
         </p>
         </div>
         <div class="ImgPara">
-          <div class="morePara">
-            <div class="para">
+          <div class="morePara changethis">
+            <div class="para ">
             Perfect recreation in an unmatched location</div>
             <p>
-              <div class="paraLine">Our widely-acclaimed courses have been designed by </div>
-              <div class="paraLine">some of the world’s very best architects, including </div>
-              <div class="paraLine">Robert Trent Jones Jr. and Tom Fazio. </div>
+              <div class="paraLine black">Our widely-acclaimed courses have been designed by </div>
+              <div class="paraLine black">some of the world’s very best architects, including </div>
+              <div class="paraLine black">Robert Trent Jones Jr. and Tom Fazio. </div>
             </p>
             <p>
-              <div class="paraLine">And it’s their genius way of transforming unique </div>
-              <div class="paraLine">landscapes into stunningly scenic courses that make </div>
-              <div class="paraLine">our golf experience as beautiful as it is playable.</div>
+              <div class="paraLine black">And it’s their genius way of transforming unique </div>
+              <div class="paraLine black">landscapes into stunningly scenic courses that make </div>
+              <div class="paraLine black">our golf experience as beautiful as it is playable.</div>
 
             </p>
             <p>
-              <div class="paraLine">Every fairway rewards the perfect drive, every bunker </div>
-              <div class="paraLine">has been carefully placed, every pin position has been </div>
-              <div class="paraLine">meticulously planned – with all our courses thoughtfully </div>
-              <div class="paraLine">crafted for challenge and leisure.</div>
+              <div class="paraLine black">Every fairway rewards the perfect drive, every bunker </div>
+              <div class="paraLine black">has been carefully placed, every pin position has been </div>
+              <div class="paraLine black">meticulously planned – with all our courses thoughtfully </div>
+              <div class="paraLine black">crafted for challenge and leisure.</div>
             </p>
             <p>
-              <div class="paraLine">So you can choose to take on your fellow members in </div>
-              <div class="paraLine">ultra-competitive annual tournaments, or just play for </div>
-              <div class="paraLine">the fun of it…barefoot with the family. This is luxury and </div>
-              <div class="paraLine">fun on your own terms.</div>
+              <div class="paraLine black">So you can choose to take on your fellow members in </div>
+              <div class="paraLine black">ultra-competitive annual tournaments, or just play for </div>
+              <div class="paraLine black">the fun of it…barefoot with the family. This is luxury and </div>
+              <div class="paraLine black">fun on your own terms.</div>
             </p>
           </div>
           <div class="img">
