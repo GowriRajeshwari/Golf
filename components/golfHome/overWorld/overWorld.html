@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="overWorld.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="container">
+        <div class="center">
+          <div id="picture"></div>
+        </div>
+        <div>
+          <ul>
+            <li rel="none"><a href="#" data-text=""></a></li>
+            <li rel="one"><a href="#" data-text="Home">Home</a></li>
+            <li rel="two"><a href="#" data-text="About">About</a></li>
+            <li rel="three"><a href="#" data-text="contact">contact</a></li>
+            <li rel="four"><a href="#" data-text="Service">Service</a></li>
+            <li rel="none" id="none"><a href="#" data-text=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $("ul li").hover(function () {
+        $("#picture").removeClass().addClass($(this).attr("rel"));
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  </body>
+</html>

@@ -3,50 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="golfHome.css" />
-    <script src="golfHome.js"></script>
+    <script src="../Jquery/golfHome.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script>
-      
-$(document).ready(function () {
-  $(window).scroll(function () {
-  var height = $(window).scrollTop();
-  var element = $(".changethis");
-  $('.changethis').each(function(){		
-  if (height > $(this).offset().top) {
+    <script src="../Jquery/scroll.js"></script>
 
-    $(this).addClass("animate");
-  }
-  else{
-    $(this).removeClass("animate");
-
-  }
-})
-});
-
-});
-// $(document).ready(function(){
-// 	topMax = 100;
-//   topMin = 25;
-//   $(document).scroll(function(){
-//     $('.changethis').each(function(){		
-//     	if($(this).offset().top-$(window).scrollTop() <= topMax && $(this).offset().top-$(window).scrollTop()>=topMin){
-//         // $(this).css({'background':'#c7c7c7'});
-//         $(this).addClass("animate");
-//       }else{
-//         // $(this).css({'background':'inherit'});
-//         $(this).removeClass("animate");
-//       }
-//   	});
-//   });  
-// });
-
-    </script>
     <style>
       body,
       html {
         height: 100%;
         margin: 0;
+        background-color: white;
         font-family: Arial, Helvetica, sans-serif;
       }
       .test {
@@ -62,30 +30,30 @@ $(document).ready(function () {
         width: 100%;
         transition: height 1s;
       }
-      .mainDiv {
-        width: 100%;
-        background-color :"pink"
-      }
+     
     </style>
   </head>
   <body>
     <div class="mainDiv">
-      <div>
+
+     <section class="marginbottom zindex" >
+      <div >
       
         <div class="bg-image">
           <div class="navbar">
             <div class="rowHeader">
-              <div>
-            <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
+              <div >
+            <img src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
               </div>
               <div class="centerStyle">
                 <a href="#what">What we do</a>
-                <a href="#ourworld">Our worlds</a>
+                <a href="#ourworld" >Our worlds</a>
                 <a href="#experience">Experience</a>
                 <a href="#company">Company</a>
                 <a href="#contact">Contact</a>
               </div>
             </div>
+            <div id="cursor"></div>
             
            
           </div>
@@ -95,10 +63,9 @@ $(document).ready(function () {
           </div>
         </div>
       </div>
-      <script src="animate.js"></script>
       </div>
       <div>
-        <div class="paraCenter changethis">
+        <div class="paraCenter changethis" data-myval="true">
           <p>
           <div class="para black">
             We commission the world’s most renowned course architects to
@@ -109,7 +76,7 @@ $(document).ready(function () {
         </p>
         </div>
         <div class="ImgPara">
-          <div class="morePara changethis">
+          <div class="morePara changethis" data-myval="true">
             <div class="para ">
             Perfect recreation in an unmatched location</div>
             <p>
@@ -140,17 +107,17 @@ $(document).ready(function () {
             <div>
               <img
               class="image"
-              src="../../assets/3D-HD-Nature-Images-For-Desktop-620x388.jpg"
+              src="../../../assets/3D-HD-Nature-Images-For-Desktop-620x388.jpg"
             />
             </div>
            
           </div>
         </div>
 
-        <div class="videoStyle">
+        <div class="videoStyle zindex">
           <div>
           <video autoplay muted loop id="myVideo">
-            <source src="../../assets/Golf_Swing.mp4" type="video/mp4">
+            <source src="../../../assets/Golf_Swing.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
         </div>
@@ -166,12 +133,12 @@ $(document).ready(function () {
         </div>
 
 
-        <div class="ImgPara">
+        <div class="ImgPara zindex">
           <div class="img">
             <div>
               <img
               class="image"
-              src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg"
+              src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg"
             />
             </div>
            
@@ -204,23 +171,64 @@ $(document).ready(function () {
             </p>
           </div>
         </div>
+
+
         <div>
-          <div class="fullImage">
+          <!-- <div class="fullImage">
             <img
             class="bg-image1"
             src="../../assets/elizeu-dias-RN6ts8IZ4_0-unsplash.jpg"
           />
+          </div> -->
+          <div class="slideshow-container fullImage">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="../../../assets/3D-HD-Nature-Images-Free-Download-620x349.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" style="width:100%">
+            </div>
+          
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div class="fullImage1">
+            <div class="row">
+            <div class="row2">
+            <div onclick="plusSlides(-1)">
+              <img src="../../../assets/arrow_back_black_36x36.png"  class="arrowImage" style="width:100%">
+            </div>
+            <div onclick="plusSlides(1)">
+              <img src="../../../assets/arrow_forward_black_36x36.png" style="width:100%">
+            </div>
+          </div>
+          <div class="dotCenter">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+           
           </div>
         </div>
-
-        <div>
+        </div>
       
-          <div class="container">
+
+
+       
+      
+          <div class="container zindex">
             <!-- <div class="img-gradient">
               <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="horseImg">
             </div> -->
             
-            <div class="footerAboveImg">
+            <div class="footerAboveImg ">
             <div class="centered">
               <div>OutDoor Pursuits</div>
               <!-- <div class="explore">
@@ -230,13 +238,14 @@ $(document).ready(function () {
            
           </div>
           </div>
-
+        </section>
+          <footer>
           <div class="footer">
             <div class="row">
-              <img src="../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
+              <img src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
               <!-- <div class="iconsize"></div> -->
               <div class="row">
-            <div class="footer">
+            <div >
               <div class="InnerFooter">Company</div>
               <div class="InnerFooter" >Carrer</div>
               <div class="InnerFooter">Foundation</div>
@@ -244,7 +253,7 @@ $(document).ready(function () {
               <div class="InnerFooter">Privacy</div>
 
             </div>
-            <div  class="footer">
+            <div >
               <div class="InnerFooter">Get in Touch</div>
               <div class="InnerFooter" >(480)624-5688</div>
               <div class="InnerFooter">mail@discoverylandco.com</div>
@@ -255,9 +264,11 @@ $(document).ready(function () {
             <p>© Discovery Land Company. All rights reserved.</p>
           </div>
           </div>
+        </footer>
 
+        <script src="../Jquery/animate.js"></script>
+      
 
-      </div>
     </div>
   </body>
 </html>
