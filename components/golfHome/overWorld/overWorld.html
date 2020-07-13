@@ -9,30 +9,84 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+   
   </head>
   <body>
-    <div class="mainContainer">
-      <div class="container">
-        <div class="center">
-          <div id="picture"></div>
+    
+      <div >
+        <div class="mainContainer">
+      
+          <div class="container">
+            <div class="center">
+              <div id="picture"></div>
+            </div>
+            <div>
+              <ul>
+                <li rel="one" class="inner-div">
+                  <a href="#" data-text="Home"><div class="heading">Chileno Bay</div></a>
+                </li>
+                <li rel="two" class="inner-div">
+                  <a href="#" data-text="About"><div class="heading">Madison</div></a>
+                </li>
+                <li rel="three" class="inner-div">
+                  <a href="#" data-text="contact"><div  class="heading">Dune Deck</div></a>
+                </li>
+                <li rel="four" class="inner-div">
+                  <a href="#" data-text="Service"><div class="heading">Kukio</div></a>
+                </li>
+                <!-- <li rel="five" class="inner-div">
+                  <a href="#" data-text="Service"><div class="heading">Hideaway</div></a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
         </div>
-        <div>
-          <ul>
-            <li rel="none"><a href="#" data-text=""></a></li>
-            <li rel="one"><a href="#" data-text="Home">Home</a></li>
-            <li rel="two"><a href="#" data-text="About">About</a></li>
-            <li rel="three"><a href="#" data-text="contact">contact</a></li>
-            <li rel="four"><a href="#" data-text="Service">Service</a></li>
-            <li rel="none" id="none"><a href="#" data-text=""></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      $("ul li").hover(function () {
-        $("#picture").removeClass().addClass($(this).attr("rel"));
-        $(this).addClass("active").siblings().removeClass("active");
-      });
-    </script>
+        <div class="bg-image">
+          <div class="navbar">
+            <div class="rowHeader">
+              <div >
+            <img src="../../../assets/3D-Nature-Images-For-Desktop-620x349.jpg" alt="Snow" class="iconsize">
+              </div>
+              <div class="centerStyle">
+                <a href="#what">What we do</a>
+                <a href="G:/golf/components/golfHome/overWorld/overWorld.html" >Our worlds</a>
+                <a href="G:/golf/components/golfHome/Experience/experience.html">Experience</a>
+                <a href="#company">Company</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+            <div id="cursor"></div>
+            
+      
+            <script type="text/javascript">
+              $(document).ready(function () {
+            $("ul li").scroll(function () {
+              var height = $(window).scrollTop();
+              var element = $(".changethis");
+              $(".inner-div").each(function () {
+                if (height > $(this).offset().top) {
+                 $(this).addClass("animate");
+                } else {
+                  $(this).removeClass("animate");
+                }
+              });
+            });
+          });
+          var cursor = document.getElementById("cursor");
+          document.addEventListener("mousemove", function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.left = x + "px";
+            cursor.style.top = y + "px";
+          });
+                $("ul li").hover(function () {
+                  $("#picture").removeClass().addClass($(this).attr("rel"));
+                  $(this).addClass("active").siblings().removeClass("active");
+                 $(this).addClass("animate").siblings().removeClass("animate");
+
+                });
+              </script>
+        <script src="../Jquery/animate.js"></script>
+  
   </body>
 </html>

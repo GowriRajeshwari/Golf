@@ -5,12 +5,9 @@ $(document).ready(function () {
     var height = $(window).scrollTop();
     var element = $(".changethis");
     $(".changethis").each(function () {
-      if (
-        height > $(this).offset().top &&
-        $(".changethis").attr("data-myval") == "true"
-      ) {
+      if (height > $(this).offset().top) {
         $(this).addClass("animate");
-        $(this).attr("data-myval", "false");
+        $(window).off("scroll");
       } else {
         $(this).removeClass("animate");
       }

@@ -48,7 +48,3 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.top = y + "px";
 });
 //changing image on cursor on list
-$("ul li").hover(function () {
-  $("#picture").removeClass().addClass($(this).attr("rel"));
-  $(this).addClass("active").siblings().removeClass("active");
-});

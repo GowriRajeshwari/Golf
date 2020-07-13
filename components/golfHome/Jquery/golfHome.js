@@ -19,11 +19,13 @@ $(document).ready(function () {
     var element = $(".changethis");
     $(".changethis").each(function () {
       if (
-        height > $(this).offset().top &&
-        $(this).attr("data-myval") === "true"
+        height > $(this).offset().top
+        // &&
+        // $(this).attr("data-myval") === "true"
       ) {
         $(this).addClass("animate");
         $(this).attr("data-myval", "false");
+        $(window).off("scroll");
       } else {
         $(this).removeClass("animate");
       }
