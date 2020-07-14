@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(".changethis").each(function () {
       if (height > $(this).offset().top) {
         $(this).addClass("animate");
-        $(window).off("scroll");
+        // $(window).off("scroll");
       } else {
         $(this).removeClass("animate");
       }

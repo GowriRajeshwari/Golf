@@ -261,12 +261,20 @@ img {
 }
 .explore {
   position: absolute;
-  top: 40%;
+  /* top: 50%; */
   left: 25%;
+  width: 100px;
+  height: 50px;
   color: white;
   display: flex;
   margin: 40px;
-  border: 2px solid white;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.exploreInnerDiv {
+  font-size: 14px;
 }
 .navbar {
   overflow: hidden;
