@@ -560,7 +560,7 @@ a:hover#cursor {
 .explore1 {
   position: absolute;
   /* top: 50%; */
-  left: 25%;
+  left: 15%;
   width: 100px;
   height: 50px;
   color: white;
@@ -573,4 +573,7 @@ a:hover#cursor {
 }
 .exploreInnerDiv1 {
   font-size: 14px;
+}
+a {
+  text-decoration: none;
 }
