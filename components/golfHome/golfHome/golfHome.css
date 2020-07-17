@@ -8,7 +8,8 @@ img {
   vertical-align: middle;
 }
 .image {
-  height: 630px;
+  /* height: 630vh; */
+  height: 100%;
   width: 100%;
   box-shadow: 50px 50px grey;
 }
@@ -55,8 +56,9 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(145, 55, 55, 0.5)),
     url("../../../assets/courtney-cook-SsIIw_MET0E-unsplash.jpg");
+  object-fit: cover;
 }
 .bg-image1 {
   height: 100%;
@@ -97,12 +99,13 @@ img {
   align-items: center;
 }
 .para {
-  font-size: 35px;
-  font-weight: 300;
-  font-family: lato;
-  color: #7c7b7b;
-  /* opacity: 0.7; */
+  /* font-size: 35px; */
+  font-size: calc(27px + 17 * (100vw - 500px) / 1500);
+  color: black;
+  line-height: 1.4;
+  opacity: 1;
   padding: 5px;
+  --spacing: 10rem;
 }
 .paraLine {
   font-size: 15px;
@@ -219,9 +222,17 @@ img {
   z-index: 1;
   bottom: 0;
   align-items: center;
+  transition: 1s;
+}
+.footer1 {
+  /* display: flex; */
+  /* align-items: center; */
+  padding-top: 60px;
+  /* justify-content: center; */
 }
 .marginbottom {
   margin-bottom: 400px;
+  transition: 1s;
 }
 .footerAboveImg {
   height: 500px;
@@ -344,6 +355,9 @@ a:hover#cursor {
 }
 .black {
   background-color: white;
+  font-family: gt-sectra;
+  font-weight: 200;
+  line-height: 1.4;
   /* transform: translate(0%, 125%); */
   /* animation: matrix; */
 }
@@ -467,16 +481,21 @@ a:hover#cursor {
 }
 .video {
   width: 100%;
+  transition: 0.5s all ease-in-out;
   /* border: 1px solid black; */
+}
+.video:hover {
+  transform: scale(1.1);
 }
 .wrapper {
   display: table;
   width: auto;
   position: relative;
+  overflow: hidden;
   /* width: 50%; */
 }
 .playpause {
-  background-image: url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
+  background-image: url(https://img.icons8.com/ios/50/000000/play-button-circled.png);
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
@@ -488,4 +507,5 @@ a:hover#cursor {
   margin: auto;
   background-size: contain;
   background-position: center;
+  color: white;
 }

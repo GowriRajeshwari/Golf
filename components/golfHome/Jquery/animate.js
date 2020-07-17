@@ -61,3 +61,18 @@ $(document).ready(function () {
       }
     });
 });
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if (
+      $(window).scrollTop() + $(window).height() >
+      $(document).height() - 100
+    ) {
+      $(".footer").css("height", "400px");
+      $(".marginbottom").css("margin-bottom", "400px");
+    } else {
+      $(".footer").css("height", "200px");
+      $(".marginbottom").css("margin-bottom", "200px");
+    }
+  });
+});
