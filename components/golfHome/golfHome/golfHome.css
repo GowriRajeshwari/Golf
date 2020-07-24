@@ -16,7 +16,7 @@ img {
 }
 .image:after {
   content: "";
-  background: linear-gradient(to bottom, #333, rgb(131, 172, 129));
+  background: linear-gradient(to bottom, #333, rgb(173, 184, 172));
   position: absolute;
   width: 100%;
   height: 550px;
@@ -33,7 +33,7 @@ img {
 }
 .image1:after {
   content: "";
-  background: linear-gradient(to bottom, #333, rgb(131, 172, 129));
+  background: linear-gradient(to bottom, #333, rgb(173, 184, 172));
   position: absolute;
   width: 100%;
   height: 550px;
@@ -158,6 +158,7 @@ img {
   margin-top: 40px;
   margin-bottom: 40px;
   align-items: center;
+  flex-direction: row;
 }
 .morePara {
   width: 50%;
@@ -647,4 +648,111 @@ a:hover#cursor {
   background-size: contain;
   background-position: center;
   color: white;
+}
+.wrap {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.ml16 {
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 2em;
+}
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+  .ImgPara {
+    display: flex;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  a.left {
+    position: relative;
+    margin-left: 70px;
+  }
+  .morePara {
+    width: 70%;
+    /* background-color: red; */
+    padding: 20px;
+    margin: 20px;
+  }
+  .img {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    /* background-color: green; */
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .ImgPara {
+    display: flex;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  a.left {
+    position: relative;
+    margin-left: 70px;
+  }
+  .morePara {
+    width: 70%;
+    /* background-color: red; */
+    padding: 20px;
+    margin: 20px;
+  }
+  .img {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    /* background-color: green; */
+  }
 }
