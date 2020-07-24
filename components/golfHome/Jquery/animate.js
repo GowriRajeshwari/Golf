@@ -69,8 +69,10 @@ $(document).ready(function () {
       $(document).height() - 100
     ) {
       $(".footer").css("height", "400px");
+      $(".footer1").css("padding-top", "60px");
       $(".marginbottom").css("margin-bottom", "400px");
     } else {
+      $(".footer1").css("padding-top", "0px");
       $(".footer").css("height", "200px");
       $(".marginbottom").css("margin-bottom", "200px");
     }
