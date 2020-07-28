@@ -109,3 +109,149 @@ $(document).ready(function () {
       delay: 1000,
     });
 });
+
+$(document).ready(function () {
+  $(".closeButton").click(function () {
+    $(".closeButton").addClass("container1");
+  });
+});
+function populateSelect() {
+  // THE JSON ARRAY.
+  var birds = [
+    {
+      ID: "001",
+      Bird_Name: "Barbuda Ocean Club",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "002",
+      Bird_Name: "Chileno Bay",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "003",
+      Bird_Name: "CordeValle",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "004",
+      Bird_Name: "CostaTerra",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "005",
+      Bird_Name: "DriftWood",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "006",
+      Bird_Name: "Dune Deck",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "007",
+      Bird_Name: "El Dorado",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "008",
+      Bird_Name: "Estanica",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "009",
+      Bird_Name: "Gozzer Ranch",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "010",
+      Bird_Name: "Hideaway",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+  ];
+
+  var ele = document.getElementById("sel");
+  for (var i = 0; i < birds.length; i++) {
+    // POPULATE SELECT ELEMENT WITH JSON.
+    ele.innerHTML =
+      ele.innerHTML +
+      '<option value="' +
+      birds[i]["ID"] +
+      '">' +
+      birds[i]["Bird_Name"] +
+      "</option>";
+  }
+}
+
+function show(ele) {
+  var birds = [
+    {
+      ID: "001",
+      Bird_Name: "Barbuda Ocean Club",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "002",
+      Bird_Name: "Chileno Bay",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "003",
+      Bird_Name: "CordeValle",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "004",
+      Bird_Name: "CostaTerra",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "005",
+      Bird_Name: "DriftWood",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "006",
+      Bird_Name: "Dune Deck",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "007",
+      Bird_Name: "El Dorado",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "008",
+      Bird_Name: "Estanica",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "009",
+      Bird_Name: "Gozzer Ranch",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+    {
+      ID: "010",
+      Bird_Name: "Hideaway",
+      Address: "Sales office,501,Route 44,Amenia,New York,12501",
+    },
+  ];
+  // GET THE SELECTED VALUE FROM <select> ELEMENT AND SHOW IT.
+  if ($("#1").css("display") != "none") {
+    $("#2").show().siblings("div").hide();
+  } else if ($("#2").css("display") != "none") {
+    $("#1").show().siblings("div").hide();
+  }
+  var msg = document.getElementById("msg");
+
+  msg.innerHTML =
+    birds[ele.selectedIndex]["Bird_Name"] +
+    "</b> </br>" +
+    +birds[ele.selectedIndex]["ID"] +
+    "</b>";
+}
+$(".main-gallery").flickity({
+  // options
+  cellAlign: "left",
+  contain: true,
+});
